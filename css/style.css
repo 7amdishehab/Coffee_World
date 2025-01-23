@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6{
 .header{
   position: sticky;
   top: 0;
-  box-shadow: 0 0 5px #ddd;
+  box-shadow: 0 0 5px #ddddddb1;
   background-color: #fff;
   z-index: 999;
 }
@@ -194,8 +194,8 @@ h1,h2,h3,h4,h5,h6{
 .home{
   position: relative;
   background-color: var(--third-color);
-  min-height: calc(100vh);
-  /* max-height: calc(100vh - 60px); */
+  min-height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
 }
@@ -331,7 +331,7 @@ h1,h2,h3,h4,h5,h6{
   overflow: hidden;
   background: #fff;
   transition: transform var(--main-transition), box-shadow var(--main-transition);
-  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 5%);
 }
 .products .box:hover{
   transform: scale(1.02);
@@ -536,7 +536,7 @@ h1,h2,h3,h4,h5,h6{
   position: relative;
   padding-top: var(--mainPadding);
   padding-bottom: var(--mainPadding);
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
 }
 .deals .container{
   display: flex;
@@ -587,7 +587,7 @@ h1,h2,h3,h4,h5,h6{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--third-color);
+  background-color: var(--fourth-color);
   position: relative;
   margin-bottom: 20px;
   transition: var(--main-transition);
@@ -622,16 +622,16 @@ h1,h2,h3,h4,h5,h6{
 }
 .deals .container .info .buy{
   color: #fff;
-  background-color: var(--main-color);
+  background-color: var(--sec-color);
   padding: 5px 15px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 18px;
   margin-top: 10px;
   transition: var(--main-transition);
   max-width: fit-content;
 }
 .deals .container .info .buy:hover{
-  background-color: var(--sec-color)
+  background-color: var(--main-color)
 }
 @media (max-width: 992px){
   .deals .container{
@@ -926,6 +926,7 @@ h1,h2,h3,h4,h5,h6{
 .footer .container .col-2 h2,
 .footer .container .col-3 h2{
   font-size: 20px;
+  color: var(--sec-color);
 }
 .footer .container .col-1 ul li,
 .footer .container .col-2 ul li,
