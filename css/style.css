@@ -169,13 +169,13 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
-    width: 100%;
+    width: 100px;
     min-width: 100px;
-    background-color: #ffffff;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    background-color: #ffffffe0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     gap: 0;
     box-shadow: 1px 1px 5px #00000026;
   }
@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5,h6{
     background-color: var(--third-color);
   }
   .header .container .nav-links li:not(:last-child){
-    border-bottom: 1px solid var(--sec-color);
+    border-bottom: 1px solid var(--fourth-color);
   }
   .header .container .nav-links a{
     max-height: fit-content;
@@ -459,6 +459,10 @@ h1,h2,h3,h4,h5,h6{
   position: relative;
   padding-top: var(--mainPadding);
   padding-bottom: var(--mainPadding);
+  background-image: url(/images/wall.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .gallery .container{
   display: grid;
@@ -499,8 +503,20 @@ h1,h2,h3,h4,h5,h6{
   width: 200px;
   border-radius: 10px;
   position: relative;
-  border: 4px solid var(--sec-color);
+  border-bottom: 5px solid var(--sec-color);
   transition: var(--main-transition);
+}
+.gallery .container .images img:nth-child(1){
+  margin-bottom: 20px;
+}
+.gallery .container .images img:nth-child(2){
+  margin-bottom: -20px;
+}
+.gallery .container .images img:nth-child(3){
+  margin-bottom: 20px;
+}
+.gallery .container .images img:nth-child(4){
+  margin-bottom: -20px;
 }
 .gallery .container .images img:hover{
   transform: scale(1.05);
@@ -538,7 +554,7 @@ h1,h2,h3,h4,h5,h6{
   .gallery .container .images img{
     width: 150px;
     border-radius: 10px;
-    border: 2px solid var(--sec-color);
+    border-bottom: 3px solid var(--sec-color);
   }
 }
 /* end gallery */
@@ -634,7 +650,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .deals .container .info .buy{
   color: #fff;
-  background-color: var(--sec-color);
+  background-color: var(--main-color);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 18px;
@@ -643,7 +659,7 @@ h1,h2,h3,h4,h5,h6{
   max-width: fit-content;
 }
 .deals .container .info .buy:hover{
-  background-color: var(--main-color)
+  background-color: var(--sec-color)
 }
 @media (max-width: 992px){
   .deals .container{
@@ -704,3 +720,270 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 /* end deals */
+/* start contact */
+.contact{
+  position: relative;
+  padding-top: var(--mainPadding);
+  padding-bottom: var(--mainPadding);
+}
+.contact .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.contact .container img{
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+  animation: up-down 5s linear infinite;
+}
+.contact .container .form{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr );
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.contact .container .form input,
+.contact .container .form textarea{
+  background-color: #fffaf6;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--sec-color);
+  resize: none;
+  caret-color: var(--sec-color);
+  transition: var(--main-transition);
+}
+.contact .container .form input:focus,
+.contact .container .form textarea:focus{
+  outline: none;
+  background-color: var(--third-color);
+}
+.contact .container .form input::placeholder,
+.contact .container .form textarea::placeholder{
+  color: var(--sec-color);
+}
+.contact .container .form button{
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--sec-color);
+  color: #fff;  
+  transition: var(--main-transition);
+}
+.contact .container .form button:hover{
+  background-color: var(--main-color);
+}
+@media (max-width: 992px) {
+  .contact .container{
+    justify-content: center;
+  }
+  .contact .container img{
+    display: none;
+  }
+  .contact .container .form{
+    padding: 20px;
+  }
+}
+/* end contact */
+/* start join */
+.join{
+  position: relative;
+  padding-top: var(--mainPadding);
+  padding-bottom: var(--mainPadding);
+  background-color: var(--third-color);
+}
+.join .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+}
+.join .container .info{
+  max-width: 400px;
+}
+.join .container .info h2{
+  font-size: 32px;
+  color: var(--main-color);
+}
+.join .container .info h2 span{
+  color: var(--sec-color);
+}
+.join .container .info p{
+  font-size: 16px;
+  color: var(--main-color);
+  line-height: var(--lineHeight);
+}
+.join .container .form{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+}
+.join .container .form input{
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--sec-color);
+  caret-color: var(--sec-color);
+  width: 250px;
+  transition: var(--main-transition);
+}
+.join .container .form input:focus{
+  outline: none;
+}
+.join .container .form input::placeholder{
+  color: var(--sec-color);
+}
+.join .container .form button{
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--sec-color);
+  color: #fff;  
+  transition: var(--main-transition);
+}
+.join .container .form button:hover{
+  background-color: var(--main-color);
+}
+@media (max-width: 992px) {
+  .join .container{
+    justify-content: center;
+    gap: 20px;
+  }
+  .join .container .info{
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .join .container .info{
+    max-width: 300px;
+  }
+  .join .container .info h2{
+    font-size: 28px;
+  }
+  .join .container .info p{
+    font-size: 14px;
+  }
+}
+/* end join */
+/* start footer */
+.footer{
+  position: relative;
+  padding-top: var(--mainPadding);
+  padding-bottom: var(--mainPadding);
+  background-color: #3f2a1a;
+  color: var(--third-color);
+  line-height: var(--lineHeight);
+}
+.footer .container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+}
+.footer .container > p{
+  margin: auto;
+}
+.footer .container > p span{
+  color: var(--sec-color);
+}
+.footer .container .footer-info{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+.footer .container .info{
+  max-width: 400px;
+}
+.footer .container .info,
+.footer .container .col-1,
+.footer .container .col-2,
+.footer .container .col-3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+.footer .container .info h1{
+  color: var(--sec-color);
+  margin: 0;
+  font-size: 26px;
+}
+.footer .container .info h1 span{
+  color: var(--third-color);
+}
+.footer .container .info p{
+  font-size: 14px;
+  margin: 0;
+}
+.footer .container .info .social-media{
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.footer .container .info .social-media a{
+  color: var(--fourth-color);
+  font-size: 20px;
+}
+.footer .container .info .social-media a:hover{
+  color: #fff;
+}
+.footer .container .col-1 h2,
+.footer .container .col-2 h2,
+.footer .container .col-3 h2{
+  font-size: 20px;
+}
+.footer .container .col-1 ul li,
+.footer .container .col-2 ul li,
+.footer .container .col-3 ul li{
+  font-size: 14px;
+}
+.footer .container .copy-right{
+  margin: auto;
+}
+@media (max-width: 500px){
+  .footer .container{
+    text-align: center;
+  }
+  .footer .container .footer-info{
+    gap: 0px;
+    justify-content: center;
+  }
+  .footer .container .info{
+    max-width: 300px;
+  }
+  .footer .container .col-1,
+  .footer .container .col-2,
+  .footer .container .col-3{
+    display: none;
+  }
+  .footer .container .info h1{
+    font-size: 22px;
+  }
+  .footer .container .info .social-media{
+    justify-content: center;
+  }
+}
+/* end footer */
