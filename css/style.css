@@ -459,10 +459,6 @@ h1,h2,h3,h4,h5,h6{
   position: relative;
   padding-top: var(--mainPadding);
   padding-bottom: var(--mainPadding);
-  background-image: url(/images/wall.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .gallery .container{
   display: grid;
